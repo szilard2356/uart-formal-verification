@@ -2,7 +2,7 @@
 Independent Laboratory and Thesis project at Budapest University of Technology and Economics exploring modern SystemVerilog verification. Showcases custom RTL design, Assertion-Based Verification (SVA), automated Scoreboards, and Black-Box hardware testing methodologies.
 
 # Lab Project:
-**Educational Objective:** The core focus of this combined laboratory and thesis work is to gain hands-on mastery of modern digital verification methodologies, effectively bridging the gap between university studies and industry-standard practices.
+**Educational Objective:** The core focus of this combined laboratory and thesis work is to gain hands-on knowledge of modern digital verification methodologies, bridging the gap between university studies and industry-standard practices.
 
 ## Architecture
 Based on the project documentation, the overall system consists of a custom-designed UART Receiver (RX) and a provided UART Transmitter (TX)
