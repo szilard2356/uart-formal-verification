@@ -7,9 +7,9 @@ Based on the project documentation, the overall system consists of a custom-desi
 1. The Custom UART RX Module (White-Box)
 The UART RX module was fully custom-designed and implemented using SystemVerilog. It supports robust asynchronous communication configured via parameterizable data bits (5-8), stop bits (1-2), parity, and baud rate (P_DIVISOR).
 
-*Architecture: The design utilizes two counters for baud rate generation and a 13x oversampling mechanism.
-*Data Path & Control: It features a shift register for data parallelization and a Finite State Machine (FSM) operating through specific states: IDLE, START, DATA, CHECK_PARITY, and CHECK_FRAME.
-*Refinement: During the verification phase, a false-positive frame_err issue was identified and successfully resolved by enforcing strict mid-bit sampling (counter == 6) within the FSM. 
+* Architecture: The design utilizes two counters for baud rate generation and a 13x oversampling mechanism.
+* Data Path & Control: It features a shift register for data parallelization and a Finite State Machine (FSM) operating through specific states: IDLE, START, DATA, CHECK_PARITY, and CHECK_FRAME.
+* Refinement: During the verification phase, a false-positive frame_err issue was identified and successfully resolved by enforcing strict mid-bit sampling (counter == 6) within the FSM. 
 
 2. The UART TX Module (Black-Box IP)
 The UART TX module was provided by the project consultant as a pre-existing component. Throughout the project, this module was strictly treated as a "Black Box" Third-Party IP. The verification environment was built to validate its functional correctness solely through its external ports and interfaces without modifying its internal RTL implementation.
