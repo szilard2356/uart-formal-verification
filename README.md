@@ -7,7 +7,7 @@ Independent Laboratory and Thesis project at Budapest University of Technology a
 ## Architecture
 Based on the project documentation, the overall system consists of a custom-designed UART Receiver (RX) and a provided UART Transmitter (TX)
 
-###1. The Custom UART RX Module (White-Box)
+### 1. The Custom UART RX Module (White-Box)
 
 The UART RX module was fully custom-designed and implemented using SystemVerilog. It supports robust asynchronous communication configured via parameterizable data bits (5-8), stop bits (1-2), parity, and baud rate (P_DIVISOR).
 
