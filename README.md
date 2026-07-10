@@ -1,6 +1,8 @@
 # uart-formal-verification
 Independent Laboratory and Thesis project at Budapest University of Technology and Economics exploring modern SystemVerilog verification. Showcases custom RTL design, Assertion-Based Verification (SVA), automated Scoreboards, and Black-Box hardware testing methodologies.
 
+# Lab Project:
+
 ## Architecture
 Based on the project documentation, the overall system consists of a custom-designed UART Receiver (RX) and a provided UART Transmitter (TX)
 
@@ -20,3 +22,12 @@ To ensure the hardware met the required specifications, the verification process
 * Traditional Waveform Verification: Initial testing relied on structured tasks and randomized stimulus generation, followed by manual visual inspection of the waveforms to detect basic functional errors.
 * Automated Self-Checking Verification (Scoreboard): To handle extensive, automated testing (e.g., verifying robustness against baud rate deviations), parallel prediction algorithms were implemented. A Scoreboard component continuously monitored the DUT, comparing the real-time received data (rx_data) against the expected outputs.
 * Assertion-Based Verification (SVA): To mathematically validate strict temporal rules and protocol specifications—such as ensuring the ready signal drops exactly one clock cycle after the tx_strobe—SystemVerilog Assertions were integrated into the environment. Both assert and cover statements were utilized to guarantee that all protocol states were reachable and unviolated during simulation.
+
+# Thesis Project (Starting September 2026)
+
+The continuation of this project will serve as the foundation for my university thesis. The primary objective is to upgrade the current UART module with additional peripherals, creating a highly robust RTL design, and to verify it using state-of-the-art industry methodologies. 
+
+Key milestones include:
+* **System Expansion:** Upgrading the core UART architecture by integrating complex peripherals to develop a more comprehensive hardware design.
+* **UVM Integration:** Transitioning the testbench environment to the Universal Verification Methodology (UVM) for highly scalable, reusable, and structured automated testing.
+* **Formal Verification:** Expanding the use of SystemVerilog Assertions (SVA) beyond dynamic simulation to perform exhaustive formal verification, mathematically proving corner cases and strict protocol properties.
