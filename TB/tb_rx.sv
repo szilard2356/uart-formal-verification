@@ -74,12 +74,10 @@ initial begin
     random_seed = $get_initial_random_seed;
     random_seed = $urandom(random_seed);
 	clk = 0;
-	rst = 1;
+	rst = 0;
     rx = 1;
     parity = 0;
 
-	#60;
-	rst = 0;
 	#60;
 	rst = 1;
     #15;

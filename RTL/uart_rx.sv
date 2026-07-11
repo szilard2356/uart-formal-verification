@@ -79,14 +79,14 @@ assign baud_cycl = (b_counter == (P_DIVISOR - 1));
 always_ff@(posedge i_clk or negedge i_rst) begin 
     if(!i_rst)
         counter <= 0;
-    else if(baud_cycl && cntr_en)begin
+    else if(!cntr_en)
+        counter <= 0;   
+    else if(baud_cycl)begin
         if(counter == 12)
             counter <= 0;
         else
             counter <= counter + 1;
     end
-    else
-        counter <= counter;
 end
 
 //---------------------------------------------------------------------------------------------------------------------------------
@@ -186,7 +186,6 @@ always_ff @(posedge i_clk or negedge i_rst) begin
                         stop_cntr <= 0;
                         busy <= 1;
                         cntr_en <= 0;
-                        counter <= 0;
                         current_state <= IDLE;
                         o_buffer <= data;
                     end
