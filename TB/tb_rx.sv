@@ -22,7 +22,7 @@ module tb_mismatch;
     localparam time CLK_T = 20ns;
     localparam time BIT_TIME = 13*DIVISOR*CLK_T;
     localparam time BIT_TIME_FASTER = BIT_TIME - ((BIT_TIME * 30)/1000);
-    localparam time BIT_TIME_SLOWER = BIT_TIME + ((BIT_TIME * 15)/1000);
+    localparam time BIT_TIME_SLOWER = BIT_TIME + ((BIT_TIME * 30)/1000);
 
 
 
